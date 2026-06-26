@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+flake8
+radon
+google-generativeai
+python-dotenv

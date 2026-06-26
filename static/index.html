@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Kod Analizörü & Yapay Zeka Asistanı</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Prism.js for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Python Kod Analizörü</h1>
+            <p>Hataları bulun, karmaşıklığı ölçün ve yapay zeka ile kodunuzu iyileştirin.</p>
+        </header>
+
+        <main>
+            <div class="editor-section">
+                <div class="editor-header">
+                    <span>main.py</span>
+                </div>
+                <textarea id="code-input" placeholder="# Python kodunuzu buraya yapıştırın...&#10;def ornek_fonksiyon():&#10;    pass"></textarea>
+                <div class="actions">
+                    <button id="analyze-btn" class="primary-btn">
+                        <span class="btn-text">Kodu Analiz Et</span>
+                        <div class="spinner hidden" id="loading-spinner"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section hidden" id="result-container">
+                <div class="score-card">
+                    <h2>Kalite Puanı</h2>
+                    <div class="score-circle" id="score-display">
+                        <span id="score-value">100</span>
+                    </div>
+                </div>
+
+                <div class="issues-card hidden" id="issues-card">
+                    <h3>Tespit Edilen Sorunlar</h3>
+                    <ul id="issues-list"></ul>
+                </div>
+
+                <div class="ai-card hidden" id="ai-card">
+                    <h3>✨ Yapay Zeka Önerisi</h3>
+                    <div id="ai-suggestion-content" class="markdown-body"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
